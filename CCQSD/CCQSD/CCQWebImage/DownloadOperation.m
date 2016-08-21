@@ -32,6 +32,10 @@
     NSData *data = [NSData dataWithContentsOfURL:URL];
     UIImage *image = [UIImage imageWithData:data];
     
+    
+    //断言
+    NSAssert(self.finisheBlock != nil, @"下载完成的回调不能为空!");
+    
     //图片下载完成之后，需要把图片传递到VC
     if(self.finisheBlock != nil){
         
