@@ -10,7 +10,11 @@
 @interface DownloadOperation ()
 
 
+//接受控制器传入的图片地址
+@property (copy , nonatomic)NSString *URLString;
 
+//接受控制器传入的下载完成的回调
+@property (copy , nonatomic) void(^finisheBlock)(UIImage *image);
 @end
 
 @implementation DownloadOperation
@@ -37,5 +41,19 @@
        }];
     }
 
+}
+
+//图片下载主方法
+
++(instancetype)downloadWithURLString:(NSString *)URLString finishedBlock:(void (^)(UIImage *))finishedBlock{
+    //创建自定义的操作
+    
+    DownloadOperation *op = [[DownloadOperation alloc]init];
+    
+    //记录外界传入的图片地址和下载完成回调
+    op.URLString = URLString;
+    op.finisheBlock = finishedBlock;
+    //返回自定义操作
+    return op;
 }
 @end

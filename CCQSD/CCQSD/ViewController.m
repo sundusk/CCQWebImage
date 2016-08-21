@@ -25,20 +25,13 @@
     _queue = [[NSOperationQueue alloc]init];
    
     //实例化自定义操作
-    DownloadOperation *op = [[DownloadOperation alloc]init];
-    
-    //向自定义操作内部传入图片地址
-    op.URLString = @"http://image.baidu.com/search/undefined";
-    
-    //把自定义操作添加到队列
+    NSString *URLString = @"http://image.baidu.com/search/undefined";
+    void(^finishedBlock)(UIImage *) = ^(UIImage *image){
+        
+    };
+    DownloadOperation *op = [DownloadOperation downloadWithURLString:URLString finishedBlock:finishedBlock];
     
     [_queue addOperation:op];
-    
-    //指定自定义操作执行的任务
-    [op setFinisheBlock:^(UIImage *image) {
-        //主线程复制操作
-        NSLog(@"%@ %@",image,[NSThread currentThread]);
-    }];
     
 }
 
