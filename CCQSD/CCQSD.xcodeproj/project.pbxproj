@@ -13,6 +13,7 @@
 		C2D1E19A1D698E3F00AD6F5D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2D1E1981D698E3F00AD6F5D /* Main.storyboard */; };
 		C2D1E19C1D698E3F00AD6F5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2D1E19B1D698E3F00AD6F5D /* Assets.xcassets */; };
 		C2D1E19F1D698E3F00AD6F5D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2D1E19D1D698E3F00AD6F5D /* LaunchScreen.storyboard */; };
+		C2D1E1A91D698F3700AD6F5D /* DownloadOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D1E1A81D698F3700AD6F5D /* DownloadOperation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		C2D1E19B1D698E3F00AD6F5D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C2D1E19E1D698E3F00AD6F5D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C2D1E1A01D698E3F00AD6F5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C2D1E1A71D698F3700AD6F5D /* DownloadOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadOperation.h; sourceTree = "<group>"; };
+		C2D1E1A81D698F3700AD6F5D /* DownloadOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadOperation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,7 @@
 		C2D1E18E1D698E3F00AD6F5D /* CCQSD */ = {
 			isa = PBXGroup;
 			children = (
+				C2D1E1A61D698F0900AD6F5D /* CCQWebImage */,
 				C2D1E1921D698E3F00AD6F5D /* AppDelegate.h */,
 				C2D1E1931D698E3F00AD6F5D /* AppDelegate.m */,
 				C2D1E1951D698E3F00AD6F5D /* ViewController.h */,
@@ -77,6 +81,15 @@
 				C2D1E1901D698E3F00AD6F5D /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C2D1E1A61D698F0900AD6F5D /* CCQWebImage */ = {
+			isa = PBXGroup;
+			children = (
+				C2D1E1A71D698F3700AD6F5D /* DownloadOperation.h */,
+				C2D1E1A81D698F3700AD6F5D /* DownloadOperation.m */,
+			);
+			path = CCQWebImage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,6 +165,7 @@
 				C2D1E1971D698E3F00AD6F5D /* ViewController.m in Sources */,
 				C2D1E1941D698E3F00AD6F5D /* AppDelegate.m in Sources */,
 				C2D1E1911D698E3F00AD6F5D /* main.m in Sources */,
+				C2D1E1A91D698F3700AD6F5D /* DownloadOperation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
